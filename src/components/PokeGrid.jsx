@@ -7,15 +7,15 @@ const PokeGrid = ({ pokemon }) => {
 
   useEffect(() => {
     getPokemon(pokemon).then((resp) => {
-      console.log("ver resp xd", resp);
-      setPokeInfo(resp);
-    });
+        console.log('ver resp', resp);
+        setPokeInfo(resp)});
   }, [pokemon]);
+
   return (
     <>
-      <h3>{pokemon}</h3>
+      {/* <h3>{pokemon}</h3> */}
       <div className="card-grid">
-        <PokeGridItem {...pokeInfo}></PokeGridItem>
+        <PokeGridItem pokeInfo={pokeInfo}></PokeGridItem>
       </div>
     </>
   );
