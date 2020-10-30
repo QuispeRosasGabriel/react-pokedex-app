@@ -1,21 +1,23 @@
-import { useState } from 'react';
-import AddPokemon from './AddPokemon';
-import PokeGrid from './PokeGrid';
+import { useState } from "react";
+import AddPokemon from "./AddPokemon";
+import PokeInfo from "./PokeInfo";
+import pokeball from "../assets/pokeball.png";
 
 const PokemonSearcher = () => {
+  const [pokemon, setPokemon] = useState("pikachu");
 
-    const [pokemon, setPokemon] = useState('pikachu');
+  return (
+    <>
+      <div className="header-container">
+        <img src={pokeball} className="App-logo" />
+        <h1>Pokedex App</h1>
+      </div>
+      <br />
+      <AddPokemon setPokemon={setPokemon} />
+      <hr />
+      <PokeInfo pokemon={pokemon}></PokeInfo>
+    </>
+  );
+};
 
-    return (
-        <div>
-            <h1>Pokedex App</h1>
-            <br />
-            <AddPokemon setPokemon={setPokemon} />
-            <hr />
-            <PokeGrid pokemon={pokemon} ></PokeGrid>
-        </div>
-    )
-}
-
-
-export default PokemonSearcher
+export default PokemonSearcher;

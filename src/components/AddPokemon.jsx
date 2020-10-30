@@ -1,24 +1,26 @@
 import { useState } from "react";
+import PokeInput from "../styled-components/PokeInput";
 
-const AddPokemon = ({setPokemon}) => {
-const [inputValue, setinputValue] = useState("");
+const AddPokemon = ({ setPokemon }) => {
+  const [inputValue, setinputValue] = useState("");
 
-const handleInputChange = (e) => {
-    setinputValue(e.target.value);
+  const handleInputChange = (e) => {
+    const formatedData = (e.target.value).toLowerCase();
+    setinputValue(formatedData);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim().length > 2) {
-     setPokemon(inputValue);
-     setinputValue("");
+      setPokemon(inputValue);
+      setinputValue("");
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="">
-        <input
+        <PokeInput
           type="text"
           onChange={handleInputChange}
           placeholder="Busca un Pokémon"
