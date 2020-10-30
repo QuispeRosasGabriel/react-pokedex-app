@@ -9,7 +9,7 @@ const PokeInfoItem = ({ pokeInfo }) => {
     <>
      <h1> {(pokeInfo.name)?.toUpperCase()}</h1>
       <PokeSquare>
-        <PokeSprite src={pokeInfo.sprites?.front_default} alt=""  />
+        <PokeSprite src={pokeInfo.sprites?.front_default} alt="Pokemon"  />
         <div>
           <p>Número de Pokédex: {pokeInfo.order}</p>
           <div className="type-box">
