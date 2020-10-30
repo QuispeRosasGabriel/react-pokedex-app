@@ -6,7 +6,6 @@ const getPokemon = async (pokemon) => {
   const { data } = await resp;
   console.log("esta es data", data);
   const pokemonInfo = await data;
-  console.log("ver pokemon info", pokemonInfo);
 
   return pokemonInfo;
 };
