@@ -9,7 +9,7 @@ const PokemonSearcher = () => {
   return (
     <>
       <div className="header-container">
-        <img src={pokeball} className="App-logo" />
+        <img src={pokeball} className="App-logo" alt="poke-logo"/>
         <h1>Pokedex App</h1>
       </div>
       <br />
