@@ -1,24 +1,18 @@
-import { useEffect, useState } from 'react';
-import getPokemon from '../helpers/GetPokemon';
+import { useState } from 'react';
+import AddPokemon from './AddPokemon';
+import PokeGrid from './PokeGrid';
 
 const PokemonSearcher = () => {
 
     const [pokemon, setPokemon] = useState('pikachu');
-    const [pokemonData, setPokemonData] = useState([]);
-    const [pokemonType, setPokemonType] = useState("");
-   
-    useEffect(() => {
-
-        getPokemon(pokemon).then((resp) => {
-            console.log('ver resp xd', resp);
-            setPokemon(resp)
-        });
-      }, []);
-    //   pokemon
 
     return (
         <div>
-            Hola desde searcher
+            <h1>Pokedex App</h1>
+            <br />
+            <AddPokemon setPokemon={setPokemon} />
+            <hr />
+            <PokeGrid pokemon={pokemon} ></PokeGrid>
         </div>
     )
 }
