@@ -23,7 +23,8 @@ const AddPokemon = ({ setPokemon }) => {
         <PokeInput
           type="text"
           onChange={handleInputChange}
-          placeholder="Busca un Pokémon"
+          placeholder="Busca un Pokémon..."
+          value={inputValue}
         />
       </label>
     </form>

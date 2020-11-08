@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 8vmin;
+  height: 4vmin;
   pointer-events: none;
 }
 
@@ -25,7 +25,7 @@
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 20px;
   padding-right: 524px;
@@ -40,9 +40,4 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.card-pokemon {
-  background-color: orange;
-  color: #fff;
 }
